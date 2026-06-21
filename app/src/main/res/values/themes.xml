@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.Wayz" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
