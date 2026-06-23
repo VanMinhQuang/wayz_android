@@ -1,0 +1,59 @@
+com.wayz.app-resValues-0 C:\Project\projects\New folder\wayz\wayz_android\app\build\generated\res\resValues\debug
+com.wayz.app-packageDebugResources-1 C:\Project\projects\New folder\wayz\wayz_android\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.wayz.app-packageDebugResources-2 C:\Project\projects\New folder\wayz\wayz_android\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.wayz.app-merged_res-3 C:\Project\projects\New folder\wayz\wayz_android\app\build\intermediates\merged_res\debug
+com.wayz.app-debug-4 C:\Project\projects\New folder\wayz\wayz_android\app\src\debug\res
+com.wayz.app-main-5 C:\Project\projects\New folder\wayz\wayz_android\app\src\main\res
+com.wayz.app-lifecycle-viewmodel-ktx-2.7.0-6 C:\Users\LTT\.gradle\caches\transforms-3\0178f0a6cde130bab627113031dea989\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.wayz.app-hilt-navigation-compose-1.2.0-7 C:\Users\LTT\.gradle\caches\transforms-3\043573af9014525ffddc742c2240d459\transformed\hilt-navigation-compose-1.2.0\res
+com.wayz.app-lifecycle-livedata-2.7.0-8 C:\Users\LTT\.gradle\caches\transforms-3\17a4e1773b77cbe0b00baa0454fdc1c7\transformed\lifecycle-livedata-2.7.0\res
+com.wayz.app-ui-graphics-release-9 C:\Users\LTT\.gradle\caches\transforms-3\1ae6127207fb9a01faacd9fb3d38e7ec\transformed\ui-graphics-release\res
+com.wayz.app-animation-release-10 C:\Users\LTT\.gradle\caches\transforms-3\1ceeff05309512456bb52b3f12b5cadb\transformed\animation-release\res
+com.wayz.app-lifecycle-runtime-ktx-2.7.0-11 C:\Users\LTT\.gradle\caches\transforms-3\20a285b96e62d6b6d592f46e51a03fee\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.wayz.app-datastore-preferences-1.0.0-12 C:\Users\LTT\.gradle\caches\transforms-3\248b61c756b60f6f1edb64e7a9007d51\transformed\datastore-preferences-1.0.0\res
+com.wayz.app-savedstate-1.2.1-13 C:\Users\LTT\.gradle\caches\transforms-3\2c7cdc566fc00644b676c63bdeb62cd2\transformed\savedstate-1.2.1\res
+com.wayz.app-ui-tooling-release-14 C:\Users\LTT\.gradle\caches\transforms-3\3420f153b8f307b7f30d7ee8dede08c5\transformed\ui-tooling-release\res
+com.wayz.app-lifecycle-viewmodel-savedstate-2.7.0-15 C:\Users\LTT\.gradle\caches\transforms-3\36310e6af9e5e9850766e233463f93d3\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.wayz.app-core-runtime-2.2.0-16 C:\Users\LTT\.gradle\caches\transforms-3\36fb7b5fe5c128f02b0b2aa9d8b32b1d\transformed\core-runtime-2.2.0\res
+com.wayz.app-core-1.12.0-17 C:\Users\LTT\.gradle\caches\transforms-3\38ab462d0b10b1e9944114d56c1d29d4\transformed\core-1.12.0\res
+com.wayz.app-ui-tooling-preview-release-18 C:\Users\LTT\.gradle\caches\transforms-3\3bc65df025ad013a5f5b940b939a381c\transformed\ui-tooling-preview-release\res
+com.wayz.app-lifecycle-runtime-2.7.0-19 C:\Users\LTT\.gradle\caches\transforms-3\3cc71d878f80a16cda507dfad02ab1e3\transformed\lifecycle-runtime-2.7.0\res
+com.wayz.app-emoji2-1.3.0-20 C:\Users\LTT\.gradle\caches\transforms-3\40e9d76414cbcbfcc7ed6ac9b8771322\transformed\emoji2-1.3.0\res
+com.wayz.app-lifecycle-viewmodel-compose-2.7.0-21 C:\Users\LTT\.gradle\caches\transforms-3\492e92651bebf20e09a8f2f7171b1ba4\transformed\lifecycle-viewmodel-compose-2.7.0\res
+com.wayz.app-ui-test-manifest-1.6.1-22 C:\Users\LTT\.gradle\caches\transforms-3\52f266710a35c19b93805378490c5c11\transformed\ui-test-manifest-1.6.1\res
+com.wayz.app-material-release-23 C:\Users\LTT\.gradle\caches\transforms-3\576a361c1a50245099c904b2b29c4ffe\transformed\material-release\res
+com.wayz.app-navigation-common-ktx-2.7.7-24 C:\Users\LTT\.gradle\caches\transforms-3\6931c0f7f8bf53ea4051607376418f77\transformed\navigation-common-ktx-2.7.7\res
+com.wayz.app-lifecycle-livedata-core-2.7.0-25 C:\Users\LTT\.gradle\caches\transforms-3\71f6c9a3a6db941df4cd26c74f7a4935\transformed\lifecycle-livedata-core-2.7.0\res
+com.wayz.app-foundation-release-26 C:\Users\LTT\.gradle\caches\transforms-3\77f0c128249e6eaf7b0ed74059c380b0\transformed\foundation-release\res
+com.wayz.app-activity-compose-1.8.2-27 C:\Users\LTT\.gradle\caches\transforms-3\780ed5bafe3a974713732ce23a9aa72f\transformed\activity-compose-1.8.2\res
+com.wayz.app-activity-ktx-1.8.2-28 C:\Users\LTT\.gradle\caches\transforms-3\83eb3da766570653b717039db66a32f0\transformed\activity-ktx-1.8.2\res
+com.wayz.app-fragment-1.5.1-29 C:\Users\LTT\.gradle\caches\transforms-3\865ffde2c2d083dfcb6732f7dd24cd75\transformed\fragment-1.5.1\res
+com.wayz.app-ui-util-release-30 C:\Users\LTT\.gradle\caches\transforms-3\88700f57611c17f1547147d15a0bc79b\transformed\ui-util-release\res
+com.wayz.app-annotation-experimental-1.4.0-31 C:\Users\LTT\.gradle\caches\transforms-3\8a75ddeb498d5c391786273afdb38f8c\transformed\annotation-experimental-1.4.0\res
+com.wayz.app-lifecycle-livedata-core-ktx-2.7.0-32 C:\Users\LTT\.gradle\caches\transforms-3\9ad1f0a793511e61e4f03e1754e11bed\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.wayz.app-material3-release-33 C:\Users\LTT\.gradle\caches\transforms-3\a0b73fdbd0f82102b4224575d7e06b62\transformed\material3-release\res
+com.wayz.app-navigation-runtime-ktx-2.7.7-34 C:\Users\LTT\.gradle\caches\transforms-3\a1885180492c30d9af3f8e4eb9686d2b\transformed\navigation-runtime-ktx-2.7.7\res
+com.wayz.app-lifecycle-process-2.7.0-35 C:\Users\LTT\.gradle\caches\transforms-3\a367e20a3c4d2419fd397feeec990c94\transformed\lifecycle-process-2.7.0\res
+com.wayz.app-core-ktx-1.12.0-36 C:\Users\LTT\.gradle\caches\transforms-3\b2f04f6486c5a7d61d8da2b980861ecc\transformed\core-ktx-1.12.0\res
+com.wayz.app-ui-release-37 C:\Users\LTT\.gradle\caches\transforms-3\b414154071d5c5d780000090e8a4fd16\transformed\ui-release\res
+com.wayz.app-runtime-saveable-release-38 C:\Users\LTT\.gradle\caches\transforms-3\b65a78379a13ff6e244bac4e0b7d7a96\transformed\runtime-saveable-release\res
+com.wayz.app-lifecycle-viewmodel-2.7.0-39 C:\Users\LTT\.gradle\caches\transforms-3\b9eca20122408a5ce7bdb0be2a64681f\transformed\lifecycle-viewmodel-2.7.0\res
+com.wayz.app-ui-unit-release-40 C:\Users\LTT\.gradle\caches\transforms-3\bf6c1e8aa7823e793a6f3f911688f169\transformed\ui-unit-release\res
+com.wayz.app-datastore-1.0.0-41 C:\Users\LTT\.gradle\caches\transforms-3\c4586b127920584f97bd5387a1dd2b3a\transformed\datastore-1.0.0\res
+com.wayz.app-navigation-common-2.7.7-42 C:\Users\LTT\.gradle\caches\transforms-3\c58fb4aab3372cc87b5dc6fe6608258d\transformed\navigation-common-2.7.7\res
+com.wayz.app-navigation-compose-2.7.7-43 C:\Users\LTT\.gradle\caches\transforms-3\d638c60e7de0ec1263bcfd1e444bac7b\transformed\navigation-compose-2.7.7\res
+com.wayz.app-ui-tooling-data-release-44 C:\Users\LTT\.gradle\caches\transforms-3\d681c5ee962d35f9d8f988cb997ff6f7\transformed\ui-tooling-data-release\res
+com.wayz.app-foundation-layout-release-45 C:\Users\LTT\.gradle\caches\transforms-3\dd556aa966dd315eca440244d04da6e3\transformed\foundation-layout-release\res
+com.wayz.app-ui-text-release-46 C:\Users\LTT\.gradle\caches\transforms-3\ddaa955599c94709e56576fef7af9195\transformed\ui-text-release\res
+com.wayz.app-runtime-release-47 C:\Users\LTT\.gradle\caches\transforms-3\ddc163022b2f2043c3581d51f1b4e42a\transformed\runtime-release\res
+com.wayz.app-material-icons-core-release-48 C:\Users\LTT\.gradle\caches\transforms-3\e1f1b35cb8999bf9873e61e13d6d5fb0\transformed\material-icons-core-release\res
+com.wayz.app-savedstate-ktx-1.2.1-49 C:\Users\LTT\.gradle\caches\transforms-3\e32873df891349c58a5850c337c8ab96\transformed\savedstate-ktx-1.2.1\res
+com.wayz.app-ui-geometry-release-50 C:\Users\LTT\.gradle\caches\transforms-3\e486ab7a7787fca09b04eaf6598aeae9\transformed\ui-geometry-release\res
+com.wayz.app-material-ripple-release-51 C:\Users\LTT\.gradle\caches\transforms-3\e4a4d402532d669cf5daa2567c68e191\transformed\material-ripple-release\res
+com.wayz.app-customview-poolingcontainer-1.0.0-52 C:\Users\LTT\.gradle\caches\transforms-3\e960e8e5089bf9494e01fce589d35894\transformed\customview-poolingcontainer-1.0.0\res
+com.wayz.app-hilt-navigation-1.2.0-53 C:\Users\LTT\.gradle\caches\transforms-3\f194cbe3b12f554a326179f37a90466a\transformed\hilt-navigation-1.2.0\res
+com.wayz.app-profileinstaller-1.3.0-54 C:\Users\LTT\.gradle\caches\transforms-3\f3b064a3f62b3d30c5f257178a354b68\transformed\profileinstaller-1.3.0\res
+com.wayz.app-animation-core-release-55 C:\Users\LTT\.gradle\caches\transforms-3\f8e2e40120bed057a4bcc9ad2c9da6e2\transformed\animation-core-release\res
+com.wayz.app-navigation-runtime-2.7.7-56 C:\Users\LTT\.gradle\caches\transforms-3\fab369ac934c1a4f5588c9e41f951f15\transformed\navigation-runtime-2.7.7\res
+com.wayz.app-startup-runtime-1.1.1-57 C:\Users\LTT\.gradle\caches\transforms-3\fba58e586c2650e21a67d207d7e7fb4d\transformed\startup-runtime-1.1.1\res
+com.wayz.app-activity-1.8.2-58 C:\Users\LTT\.gradle\caches\transforms-3\fd987dc6e323d3236dd62b6abde04b75\transformed\activity-1.8.2\res
