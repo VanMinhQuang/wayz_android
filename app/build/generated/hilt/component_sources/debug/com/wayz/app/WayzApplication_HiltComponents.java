@@ -1,8 +1,12 @@
 package com.wayz.app;
 
 import com.wayz.app.core.di.NetworkModule;
-import com.wayz.app.di.AuthModule;
-import com.wayz.app.features.auth.ui.AuthViewModel_HiltModules;
+import com.wayz.app.di.ApiModule;
+import com.wayz.app.di.RepositoryModule;
+import com.wayz.app.ui.auth.AuthViewModel_HiltModules;
+import com.wayz.app.ui.events.EventsViewModel_HiltModules;
+import com.wayz.app.ui.places.PlacesViewModel_HiltModules;
+import com.wayz.app.ui.social.SocialFeedViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -118,10 +122,11 @@ public final class WayzApplication_HiltComponents {
 
   @Component(
       modules = {
+          ApiModule.class,
           ApplicationContextModule.class,
-          AuthModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
           NetworkModule.class,
+          RepositoryModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class
       }
@@ -147,8 +152,11 @@ public final class WayzApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AuthViewModel_HiltModules.KeyModule.class,
+          EventsViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HiltWrapper_SavedStateHandleModule.class,
+          PlacesViewModel_HiltModules.KeyModule.class,
+          SocialFeedViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class
       }
@@ -187,7 +195,10 @@ public final class WayzApplication_HiltComponents {
   @Subcomponent(
       modules = {
           AuthViewModel_HiltModules.BindsModule.class,
-          HiltWrapper_HiltViewModelFactory_ViewModelModule.class
+          EventsViewModel_HiltModules.BindsModule.class,
+          HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
+          PlacesViewModel_HiltModules.BindsModule.class,
+          SocialFeedViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

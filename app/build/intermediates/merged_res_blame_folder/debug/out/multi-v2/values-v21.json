@@ -4,7 +4,7 @@
             "outputFile": "com.wayz.app-mergeDebugResources-2:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LTT\\.gradle\\caches\\transforms-3\\38ab462d0b10b1e9944114d56c1d29d4\\transformed\\core-1.12.0\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\LTT\\.gradle\\caches\\transforms-3\\583766ba7f489fc0b1ddd4fab2420a25\\transformed\\core-1.12.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

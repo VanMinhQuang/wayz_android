@@ -14,11 +14,26 @@ import com.wayz.app.core.network.ApiService;
 import com.wayz.app.core.network.AuthInterceptor;
 import com.wayz.app.core.network.TokenAuthenticator;
 import com.wayz.app.core.session.SessionManager;
-import com.wayz.app.di.AuthModule_ProvideAuthApiFactory;
-import com.wayz.app.features.auth.data.AuthApi;
-import com.wayz.app.features.auth.data.AuthRepository;
-import com.wayz.app.features.auth.ui.AuthViewModel;
-import com.wayz.app.features.auth.ui.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.wayz.app.data.auth.api.AuthApi;
+import com.wayz.app.data.auth.repository.AuthRepositoryImpl;
+import com.wayz.app.data.events.api.EventsApi;
+import com.wayz.app.data.events.repository.EventsRepositoryImpl;
+import com.wayz.app.data.places.api.PlacesApi;
+import com.wayz.app.data.places.repository.PlacesRepositoryImpl;
+import com.wayz.app.data.social.api.SocialApi;
+import com.wayz.app.data.social.repository.SocialRepositoryImpl;
+import com.wayz.app.di.ApiModule_ProvideAuthApiFactory;
+import com.wayz.app.di.ApiModule_ProvideEventsApiFactory;
+import com.wayz.app.di.ApiModule_ProvidePlacesApiFactory;
+import com.wayz.app.di.ApiModule_ProvideSocialApiFactory;
+import com.wayz.app.ui.auth.AuthViewModel;
+import com.wayz.app.ui.auth.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.wayz.app.ui.events.EventsViewModel;
+import com.wayz.app.ui.events.EventsViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.wayz.app.ui.places.PlacesViewModel;
+import com.wayz.app.ui.places.PlacesViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.wayz.app.ui.social.SocialFeedViewModel;
+import com.wayz.app.ui.social.SocialFeedViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -37,8 +52,10 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideCont
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DelegateFactory;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
 import dagger.internal.Provider;
+import dagger.internal.SetBuilder;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -373,7 +390,7 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>singleton(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return SetBuilder.<String>newSetBuilder(4).add(AuthViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(EventsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PlacesViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SocialFeedViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -406,6 +423,12 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
 
     private Provider<AuthViewModel> authViewModelProvider;
 
+    private Provider<EventsViewModel> eventsViewModelProvider;
+
+    private Provider<PlacesViewModel> placesViewModelProvider;
+
+    private Provider<SocialFeedViewModel> socialFeedViewModelProvider;
+
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
         ViewModelLifecycle viewModelLifecycleParam) {
@@ -416,19 +439,18 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
 
     }
 
-    private AuthRepository authRepository() {
-      return new AuthRepository(singletonCImpl.authApi(), singletonCImpl.sessionManagerProvider.get());
-    }
-
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.authViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.eventsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.placesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.socialFeedViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
     }
 
     @Override
     public Map<String, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, javax.inject.Provider<ViewModel>>singletonMap("com.wayz.app.features.auth.ui.AuthViewModel", ((Provider) authViewModelProvider));
+      return MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(4).put("com.wayz.app.ui.auth.AuthViewModel", ((Provider) authViewModelProvider)).put("com.wayz.app.ui.events.EventsViewModel", ((Provider) eventsViewModelProvider)).put("com.wayz.app.ui.places.PlacesViewModel", ((Provider) placesViewModelProvider)).put("com.wayz.app.ui.social.SocialFeedViewModel", ((Provider) socialFeedViewModelProvider)).build();
     }
 
     @Override
@@ -457,8 +479,17 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.wayz.app.features.auth.ui.AuthViewModel 
-          return (T) new AuthViewModel(viewModelCImpl.authRepository());
+          case 0: // com.wayz.app.ui.auth.AuthViewModel 
+          return (T) new AuthViewModel(singletonCImpl.authRepositoryImplProvider.get());
+
+          case 1: // com.wayz.app.ui.events.EventsViewModel 
+          return (T) new EventsViewModel(singletonCImpl.eventsRepositoryImplProvider.get());
+
+          case 2: // com.wayz.app.ui.places.PlacesViewModel 
+          return (T) new PlacesViewModel(singletonCImpl.placesRepositoryImplProvider.get());
+
+          case 3: // com.wayz.app.ui.social.SocialFeedViewModel 
+          return (T) new SocialFeedViewModel(singletonCImpl.socialRepositoryImplProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -548,6 +579,22 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
 
     private Provider<OkHttpClient> provideOkHttpClientProvider;
 
+    private Provider<AuthApi> provideAuthApiProvider;
+
+    private Provider<AuthRepositoryImpl> authRepositoryImplProvider;
+
+    private Provider<EventsApi> provideEventsApiProvider;
+
+    private Provider<EventsRepositoryImpl> eventsRepositoryImplProvider;
+
+    private Provider<PlacesApi> providePlacesApiProvider;
+
+    private Provider<PlacesRepositoryImpl> placesRepositoryImplProvider;
+
+    private Provider<SocialApi> provideSocialApiProvider;
+
+    private Provider<SocialRepositoryImpl> socialRepositoryImplProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -562,21 +609,25 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
       return new TokenAuthenticator(sessionManagerProvider.get(), provideApiServiceProvider);
     }
 
-    private AuthApi authApi() {
-      return AuthModule_ProvideAuthApiFactory.provideAuthApi(provideRetrofitProvider.get());
-    }
-
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
       this.sessionManagerProvider = DoubleCheck.provider(new SwitchingProvider<SessionManager>(singletonCImpl, 0));
       this.provideRetrofitProvider = new DelegateFactory<>();
-      this.provideApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 3));
-      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 2));
-      DelegateFactory.setDelegate(provideRetrofitProvider, DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 1)));
+      this.provideApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 5));
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 4));
+      DelegateFactory.setDelegate(provideRetrofitProvider, DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 3)));
+      this.provideAuthApiProvider = DoubleCheck.provider(new SwitchingProvider<AuthApi>(singletonCImpl, 2));
+      this.authRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<AuthRepositoryImpl>(singletonCImpl, 1));
+      this.provideEventsApiProvider = DoubleCheck.provider(new SwitchingProvider<EventsApi>(singletonCImpl, 7));
+      this.eventsRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<EventsRepositoryImpl>(singletonCImpl, 6));
+      this.providePlacesApiProvider = DoubleCheck.provider(new SwitchingProvider<PlacesApi>(singletonCImpl, 9));
+      this.placesRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<PlacesRepositoryImpl>(singletonCImpl, 8));
+      this.provideSocialApiProvider = DoubleCheck.provider(new SwitchingProvider<SocialApi>(singletonCImpl, 11));
+      this.socialRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<SocialRepositoryImpl>(singletonCImpl, 10));
     }
 
     @Override
-    public void injectWayzApplication(WayzApplication wayzApplication) {
+    public void injectWayzApplication(WayzApplication arg0) {
     }
 
     @Override
@@ -611,14 +662,38 @@ public final class DaggerWayzApplication_HiltComponents_SingletonC {
           case 0: // com.wayz.app.core.session.SessionManager 
           return (T) new SessionManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 1: // retrofit2.Retrofit 
+          case 1: // com.wayz.app.data.auth.repository.AuthRepositoryImpl 
+          return (T) new AuthRepositoryImpl(singletonCImpl.provideAuthApiProvider.get(), singletonCImpl.sessionManagerProvider.get());
+
+          case 2: // com.wayz.app.data.auth.api.AuthApi 
+          return (T) ApiModule_ProvideAuthApiFactory.provideAuthApi(singletonCImpl.provideRetrofitProvider.get());
+
+          case 3: // retrofit2.Retrofit 
           return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
 
-          case 2: // okhttp3.OkHttpClient 
+          case 4: // okhttp3.OkHttpClient 
           return (T) NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient(singletonCImpl.authInterceptor(), singletonCImpl.tokenAuthenticator());
 
-          case 3: // com.wayz.app.core.network.ApiService 
+          case 5: // com.wayz.app.core.network.ApiService 
           return (T) NetworkModule_ProvideApiServiceFactory.provideApiService(singletonCImpl.provideRetrofitProvider.get());
+
+          case 6: // com.wayz.app.data.events.repository.EventsRepositoryImpl 
+          return (T) new EventsRepositoryImpl(singletonCImpl.provideEventsApiProvider.get());
+
+          case 7: // com.wayz.app.data.events.api.EventsApi 
+          return (T) ApiModule_ProvideEventsApiFactory.provideEventsApi(singletonCImpl.provideRetrofitProvider.get());
+
+          case 8: // com.wayz.app.data.places.repository.PlacesRepositoryImpl 
+          return (T) new PlacesRepositoryImpl(singletonCImpl.providePlacesApiProvider.get());
+
+          case 9: // com.wayz.app.data.places.api.PlacesApi 
+          return (T) ApiModule_ProvidePlacesApiFactory.providePlacesApi(singletonCImpl.provideRetrofitProvider.get());
+
+          case 10: // com.wayz.app.data.social.repository.SocialRepositoryImpl 
+          return (T) new SocialRepositoryImpl(singletonCImpl.provideSocialApiProvider.get());
+
+          case 11: // com.wayz.app.data.social.api.SocialApi 
+          return (T) ApiModule_ProvideSocialApiFactory.provideSocialApi(singletonCImpl.provideRetrofitProvider.get());
 
           default: throw new AssertionError(id);
         }

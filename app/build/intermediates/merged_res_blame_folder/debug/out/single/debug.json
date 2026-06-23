@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\LTT\\.gradle\\daemon\\8.4\\com.wayz.app-merged_res-4:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\LTT\\.gradle\\daemon\\8.4\\com.wayz.app-main-6:\\xml\\data_extraction_rules.xml"
+        "merged": "com.wayz.app-merged_res-4:/xml_data_extraction_rules.xml.flat",
+        "source": "com.wayz.app-main-6:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\LTT\\.gradle\\daemon\\8.4\\com.wayz.app-merged_res-4:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\LTT\\.gradle\\daemon\\8.4\\com.wayz.app-main-6:\\xml\\backup_rules.xml"
+        "merged": "com.wayz.app-merged_res-4:/xml_backup_rules.xml.flat",
+        "source": "com.wayz.app-main-6:/xml/backup_rules.xml"
     },
     {
         "merged": "com.wayz.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
